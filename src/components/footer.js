@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Container, IconButton, styled } from "@mui/material";
 import { github, linkedIn, mailTo } from "../consts/footer_consts";
 import { BackgroundColors } from "../consts/colors";
@@ -6,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { ThemeColors } from "../consts/colors";
 
-function Footer() {
+const Footer = (props, ref) => {
   const handleClick = (url) => {
     window.open(url, "_blank");
   };
@@ -17,7 +18,7 @@ function Footer() {
   };
 
   return (
-    <FooterBox>
+    <FooterBox ref={ref}>
       <SocialsContainer>
         <ButtonSocials size="medium" onClick={() => handleClick(github)}>
           <GitHubIcon />
@@ -31,9 +32,9 @@ function Footer() {
       </SocialsContainer>
     </FooterBox>
   );
-}
+};
 
-export default Footer;
+export default React.forwardRef(Footer);
 
 const FooterBox = styled(Box)({
   display: "flex",
@@ -50,7 +51,8 @@ const FooterBox = styled(Box)({
   minWidth: "fit-content",
 
   background: BackgroundColors.Dark,
-  zIndex: 2,
+  zIndex: 1,
+  marginTop: "10px",
 });
 
 const SocialsContainer = styled(Container)({

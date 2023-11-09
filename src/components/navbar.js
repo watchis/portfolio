@@ -1,30 +1,31 @@
+import React from "react";
 import styled from "@emotion/styled";
 import { Box } from "@mui/system";
-import { BackgroundColors, ThemeColors } from "../consts/colors";
+import { ThemeColors } from "../consts/colors";
 import { Button } from "@mui/base";
 
-function NavBar() {
+const NavBar = ({ handlePageChange }, ref) => {
   return (
-    <NavBarBox>
+    <NavBarBox ref={ref}>
       <NavTitle>Warren Atchison</NavTitle>
       <NavItemBox>
-        <NavButton>Home</NavButton>
-        <NavButton>Resume</NavButton>
-        <NavButton>About</NavButton>
+        <NavButton onClick={handlePageChange}>Home</NavButton>
+        <NavButton onClick={handlePageChange}>Resume</NavButton>
+        <NavButton onClick={handlePageChange}>About</NavButton>
       </NavItemBox>
     </NavBarBox>
   );
-}
+};
 
-export default NavBar;
+export default React.forwardRef(NavBar);
 
 const NavBarBox = styled(Box)({
   display: "flex",
   justifyContent: "space-between",
   marginBottom: "auto",
 
-  borderBottom: "2px solid",
-  borderColor: BackgroundColors.Dark,
+  // borderBottom: "2px solid",
+  // borderColor: BackgroundColors.Dark,
 
   minHeight: "fit-content",
 
