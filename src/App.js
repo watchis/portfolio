@@ -13,6 +13,7 @@ import "./App.css";
 import img from "./assets/bg-grid.png";
 import "@fontsource/libre-barcode-128-text";
 import "@fontsource-variable/lexend";
+import "@fontsource-variable/source-code-pro";
 
 const App = () => {
   const [activePage, setActivePage] = useState(0);
@@ -46,9 +47,9 @@ const App = () => {
             height: "100%",
           }}
         >
-          <SettingsIcon id="cog-1" className="cog" />
-          <SettingsOutlinedIcon id="cog-2" className="cog-backwards" />
-          <SettingsIcon id="cog-3" className="cog" />
+          <SettingsIcon id="cog-1" />
+          <SettingsOutlinedIcon id="cog-2" />
+          <SettingsIcon id="cog-3" />
         </div>
       </CogContainer>
       <AppContainer>
