@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/lexend": "^5.0.17",
     "@fontsource/libre-barcode-128-text": "^5.0.17",
     "@mui/icons-material": "^5.14.6",
     "@mui/material": "^5.14.17",
@@ -12,6 +13,7 @@
     "react": "^18.2.0",
     "react-animate-on-scroll": "^2.1.7",
     "react-dom": "^18.2.0",
+    "react-page-scroller": "^2.3.1",
     "react-scripts": "^5.0.1",
     "react-type-animation": "^3.1.0"
   },

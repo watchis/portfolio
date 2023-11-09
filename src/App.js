@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import styled from "@emotion/styled";
 import NavBar from "./components/navbar";
 import "@fontsource/libre-barcode-128-text";
+import "@fontsource-variable/lexend";
 import { BackgroundColors } from "./consts/colors";
 
 function App() {

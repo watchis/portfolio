@@ -1,25 +1,17 @@
 import styled from "@emotion/styled";
 import { Box } from "@mui/system";
-import { ThemeColors } from "../consts/colors";
+import { BackgroundColors, ThemeColors } from "../consts/colors";
 import { Button } from "@mui/base";
 
 function NavBar() {
   return (
     <NavBarBox>
       <NavTitle>Warren Atchison</NavTitle>
-      <NavBox sx={{ display: { xs: "none", sm: "block" } }}>
-        {NavItems.map((item) => (
-          <NavLink
-            to={item.href}
-            className={({ isActive }) => (isActive ? "isActive" : "")}
-            key={item.name}
-          >
-            <NavButton className="animate__animated animate__flash animate__slow">
-              {item.name}
-            </NavButton>
-          </NavLink>
-        ))}
-      </NavBox>
+      <NavItemBox>
+        <NavButton>Home</NavButton>
+        <NavButton>Resume</NavButton>
+        <NavButton>About</NavButton>
+      </NavItemBox>
     </NavBarBox>
   );
 }
@@ -28,9 +20,11 @@ export default NavBar;
 
 const NavBarBox = styled(Box)({
   display: "flex",
-  flexDirection: "column",
   justifyContent: "space-between",
   marginBottom: "auto",
+
+  borderBottom: "2px solid",
+  borderColor: BackgroundColors.Dark,
 
   minHeight: "fit-content",
 
@@ -54,24 +48,33 @@ const NavTitle = styled("p")({
   fontFamily: "'Libre Barcode 128 Text', sans-serif",
 });
 
-const NavBox = styled(Box)({
-  ".isActive > button": {
-    borderColor: "white",
-    color: PrimaryColors[0],
-  },
+const NavItemBox = styled(Box)({
+  display: "flex",
+  minWidth: "fit-content",
+  alignItems: "center",
+  justifyItems: "right",
+
+  margin: "24px",
+  marginRight: "64px",
 });
 
 const NavButton = styled(Button)({
-  fontFamily: "Montserrat",
-  color: "white",
+  fontFamily: "'Lexend Variable', sans-serif",
+  fontSize: "24px",
+
+  color: ThemeColors.Default,
   background: "transparent",
+
   border: "transparent solid 1px",
   borderRadius: "0",
+
   margin: "0 8px",
-  padding: "8px 24px",
-  transition: "0.3s",
+  padding: "8px 16px",
+
+  userSelect: "none",
+  transition: "0.1s",
 
   "&:hover": {
-    backgroundColor: "#ffffff42",
+    color: `${ThemeColors.OffWhite}50`,
   },
 });
