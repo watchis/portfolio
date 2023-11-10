@@ -16,30 +16,47 @@ import "@fontsource-variable/lexend";
 import "@fontsource-variable/source-code-pro";
 
 const App = () => {
+  const defaultCogSpeed = 10;
+
   const [activePage, setActivePage] = useState(0);
+  const [cogSpeed, setCogSpeed] = useState(defaultCogSpeed);
+
+  const decelerateCogs = () => {
+    setCogSpeed(defaultCogSpeed);
+  };
+
+  const accelerateCogs = () => {
+    setTimeout(decelerateCogs, 1000);
+    setCogSpeed(5);
+  };
 
   const handlePageOnChange = (page) => {
     setActivePage(page);
+    accelerateCogs();
   };
 
-  const handleBeforePageChange = () => {};
+  console.log(`sendhelp ==> cogSpeed: ${cogSpeed}`);
 
   return (
     <RootContainer>
       <BackgroundContainer>
         <CogsContainer>
-          <SettingsIcon className="cog" />
-          <SettingsOutlinedIcon className="cog-backwards" />
-          <SettingsIcon className="cog" />
+          <SettingsIcon
+            style={{ animation: `cog-spin infinite ${cogSpeed}s linear` }}
+          />
+          <SettingsOutlinedIcon
+            style={{
+              animation: `cog-spin-backwards infinite ${cogSpeed}s linear`,
+            }}
+          />
+          <SettingsIcon
+            style={{ animation: `cog-spin infinite ${cogSpeed}s linear` }}
+          />
         </CogsContainer>
       </BackgroundContainer>
       <AppContainer>
         <NavBar handlePageChange={handlePageOnChange} />
-        <Body
-          handlePageOnChange={handlePageOnChange}
-          handleBeforePageChange={handleBeforePageChange}
-          activePage={activePage}
-        />
+        <Body handlePageOnChange={handlePageOnChange} activePage={activePage} />
         <Footer />
       </AppContainer>
     </RootContainer>
