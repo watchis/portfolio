@@ -17,8 +17,7 @@ import "@fontsource-variable/source-code-pro";
 
 const App = () => {
   const [activePage, setActivePage] = useState(0);
-  const [bodyHeight, setBodyHeight] = useState(window.innerHeight);
-  const rootRef = useRef(null);
+  const [bodyHeight, setBodyHeight] = useState(0);
   const topNavRef = useRef(null);
   const footerRef = useRef(null);
 
@@ -29,29 +28,24 @@ const App = () => {
   const handleBeforePageChange = () => {};
 
   useEffect(() => {
-    if (topNavRef.current && footerRef.current && rootRef.current) {
+    if (topNavRef.current && footerRef.current) {
       const body =
-        rootRef.current.clientHeight -
+        window.innerHeight -
         (topNavRef.current.clientHeight + footerRef.current.clientHeight);
 
       setBodyHeight(body);
     }
-  }, [topNavRef, footerRef, rootRef]);
+  }, [topNavRef, footerRef]);
 
   return (
-    <RootContainer ref={rootRef}>
-      <CogContainer>
-        <div
-          style={{
-            position: "relative",
-            height: "100%",
-          }}
-        >
-          <SettingsIcon id="cog-1" />
-          <SettingsOutlinedIcon id="cog-2" />
-          <SettingsIcon id="cog-3" />
-        </div>
-      </CogContainer>
+    <RootContainer>
+      <BackgroundContainer>
+        <CogsContainer>
+          + <SettingsIcon className="cog " />
+          + <SettingsOutlinedIcon className="cog-backwards" />
+          + <SettingsIcon className="cog" />
+        </CogsContainer>
+      </BackgroundContainer>
       <AppContainer>
         <NavBar handlePageChange={handlePageOnChange} ref={topNavRef} />
         <Body
@@ -79,33 +73,39 @@ const RootContainer = styled(Box)({
 const AppContainer = styled(Box)({
   display: "flex",
   flexDirection: "column",
+  height: "100%",
 });
 
-const CogContainer = styled("div")({
+const BackgroundContainer = styled("div")({
   position: "absolute",
   zIndex: 0,
-  minHeight: "100px",
-  width: "100%",
+  overflow: "hidden",
+});
+
+const CogsContainer = styled("div")({
+  position: "relative",
+  width: "100vw",
+  height: "100vh",
 
   svg: {
     position: "absolute",
     color: BackgroundColors.Dark,
     fontSize: "700px",
     display: "inline-flex",
-  },
 
-  "#cog-1": {
-    marginTop: "-80px",
-    marginLeft: "-80px",
-  },
+    ":nth-child(1)": {
+      top: "-80px",
+      left: "-80px",
+    },
 
-  "#cog-2": {
-    marginTop: "0px",
-    marginLeft: "450px",
-  },
+    ":nth-child(2)": {
+      top: "0px",
+      left: "450px",
+    },
 
-  "#cog-3": {
-    marginTop: "420px",
-    marginLeft: "110px",
+    ":nth-child(3)": {
+      top: "420px",
+      left: "110px",
+    },
   },
 });
