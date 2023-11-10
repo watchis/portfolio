@@ -4,15 +4,9 @@ import About from "./body_pages/about";
 import Contact from "./body_pages/contact";
 import ReactPageScroller from "react-page-scroller";
 
-const Body = ({
-  handlePageOnChange,
-  handleBeforePageChange,
-  activePage,
-  bodyHeight,
-}) => {
+const Body = ({ handlePageOnChange, handleBeforePageChange, activePage }) => {
   return (
     <ReactPageScroller
-      containerHeight={bodyHeight}
       pageOnChange={handlePageOnChange}
       onBeforePageScroll={handleBeforePageChange}
       customPageNumber={activePage}

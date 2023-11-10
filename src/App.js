@@ -17,9 +17,6 @@ import "@fontsource-variable/source-code-pro";
 
 const App = () => {
   const [activePage, setActivePage] = useState(0);
-  const [bodyHeight, setBodyHeight] = useState(0);
-  const topNavRef = useRef(null);
-  const footerRef = useRef(null);
 
   const handlePageOnChange = (page) => {
     setActivePage(page);
@@ -27,34 +24,23 @@ const App = () => {
 
   const handleBeforePageChange = () => {};
 
-  useEffect(() => {
-    if (topNavRef.current && footerRef.current) {
-      const body =
-        window.innerHeight -
-        (topNavRef.current.clientHeight + footerRef.current.clientHeight);
-
-      setBodyHeight(body);
-    }
-  }, [topNavRef, footerRef]);
-
   return (
     <RootContainer>
       <BackgroundContainer>
         <CogsContainer>
-          + <SettingsIcon className="cog " />
-          + <SettingsOutlinedIcon className="cog-backwards" />
-          + <SettingsIcon className="cog" />
+          <SettingsIcon className="cog" />
+          <SettingsOutlinedIcon className="cog-backwards" />
+          <SettingsIcon className="cog" />
         </CogsContainer>
       </BackgroundContainer>
       <AppContainer>
-        <NavBar handlePageChange={handlePageOnChange} ref={topNavRef} />
+        <NavBar handlePageChange={handlePageOnChange} />
         <Body
           handlePageOnChange={handlePageOnChange}
           handleBeforePageChange={handleBeforePageChange}
           activePage={activePage}
-          bodyHeight={bodyHeight}
         />
-        <Footer ref={footerRef} />
+        <Footer />
       </AppContainer>
     </RootContainer>
   );
@@ -74,6 +60,7 @@ const AppContainer = styled(Box)({
   display: "flex",
   flexDirection: "column",
   height: "100%",
+  position: "absolute",
 });
 
 const BackgroundContainer = styled("div")({
@@ -93,17 +80,17 @@ const CogsContainer = styled("div")({
     fontSize: "700px",
     display: "inline-flex",
 
-    ":nth-child(1)": {
+    ":nth-of-type(1)": {
       top: "-80px",
       left: "-80px",
     },
 
-    ":nth-child(2)": {
+    ":nth-of-type(2)": {
       top: "0px",
       left: "450px",
     },
 
-    ":nth-child(3)": {
+    ":nth-of-type(3)": {
       top: "420px",
       left: "110px",
     },

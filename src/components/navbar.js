@@ -5,13 +5,17 @@ import { ThemeColors } from "../consts/colors";
 import { Button } from "@mui/base";
 
 const NavBar = ({ handlePageChange }, ref) => {
+  const pages = ["Home", "Resume", "About"];
+
   return (
     <NavBarBox ref={ref}>
       <NavTitle>Warren Atchison</NavTitle>
       <NavItemBox>
-        <NavButton onClick={handlePageChange}>Home</NavButton>
-        <NavButton onClick={handlePageChange}>Resume</NavButton>
-        <NavButton onClick={handlePageChange}>About</NavButton>
+        {pages.map((item, i) => (
+          <NavButton onClick={() => handlePageChange(i)} key={`nav-${item}`}>
+            {item}
+          </NavButton>
+        ))}
       </NavItemBox>
     </NavBarBox>
   );
@@ -23,9 +27,6 @@ const NavBarBox = styled(Box)({
   display: "flex",
   justifyContent: "space-between",
   marginBottom: "auto",
-
-  // borderBottom: "2px solid",
-  // borderColor: BackgroundColors.Dark,
 
   minHeight: "fit-content",
 
