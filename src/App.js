@@ -77,22 +77,26 @@ const CogsContainer = styled("div")({
   svg: {
     position: "absolute",
     color: BackgroundColors.Dark,
-    fontSize: "700px",
     display: "inline-flex",
 
     ":nth-of-type(1)": {
-      top: "-80px",
-      left: "-80px",
+      fontSize: "650px",
+      top: "-315px",
+      left: "-184px",
+      rotate: "90deg",
     },
 
     ":nth-of-type(2)": {
-      top: "0px",
-      left: "450px",
+      fontSize: "650px",
+      top: "135px",
+      left: "75px",
     },
 
     ":nth-of-type(3)": {
-      top: "420px",
-      left: "110px",
+      fontSize: "650px",
+      top: "590px",
+      left: "-177px",
+      rotate: "28deg",
     },
   },
 });

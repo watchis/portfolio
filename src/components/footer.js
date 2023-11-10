@@ -7,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { ThemeColors } from "../consts/colors";
 
-const Footer = (props, ref) => {
+const Footer = () => {
   const handleClick = (url) => {
     window.open(url, "_blank");
   };
@@ -18,7 +18,7 @@ const Footer = (props, ref) => {
   };
 
   return (
-    <FooterBox ref={ref}>
+    <FooterBox>
       <SocialsContainer>
         <ButtonSocials size="medium" onClick={() => handleClick(github)}>
           <GitHubIcon />
@@ -34,7 +34,7 @@ const Footer = (props, ref) => {
   );
 };
 
-export default React.forwardRef(Footer);
+export default Footer;
 
 const FooterBox = styled(Box)({
   display: "flex",

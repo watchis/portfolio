@@ -4,11 +4,11 @@ import { Box } from "@mui/system";
 import { ThemeColors } from "../consts/colors";
 import { Button } from "@mui/base";
 
-const NavBar = ({ handlePageChange }, ref) => {
+const NavBar = ({ handlePageChange }) => {
   const pages = ["Home", "Resume", "About"];
 
   return (
-    <NavBarBox ref={ref}>
+    <NavBarBox>
       <NavTitle>Warren Atchison</NavTitle>
       <NavItemBox>
         {pages.map((item, i) => (
@@ -21,7 +21,7 @@ const NavBar = ({ handlePageChange }, ref) => {
   );
 };
 
-export default React.forwardRef(NavBar);
+export default NavBar;
 
 const NavBarBox = styled(Box)({
   display: "flex",
