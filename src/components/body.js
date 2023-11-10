@@ -4,11 +4,12 @@ import About from "./body_pages/about";
 import Contact from "./body_pages/contact";
 import ReactPageScroller from "react-page-scroller";
 
-const Body = ({ handlePageOnChange, activePage }) => {
+const Body = ({ activePage, handlePageChange }) => {
   return (
     <ReactPageScroller
-      pageOnChange={handlePageOnChange}
+      onBeforePageScroll={handlePageChange}
       customPageNumber={activePage}
+      renderAllPagesOnFirstRender={true}
       zIndex={1}
     >
       <Home />

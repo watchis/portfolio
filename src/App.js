@@ -1,13 +1,12 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Box } from "@mui/system";
 import styled from "@emotion/styled";
-import SettingsIcon from "@mui/icons-material/Settings";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 import NavBar from "./components/navbar";
 import Body from "./components/body";
 import Footer from "./components/footer";
 import { BackgroundColors } from "./consts/colors";
+import Cogs from "./components/cogs";
 
 import "./App.css";
 import img from "./assets/bg-grid.png";
@@ -15,53 +14,39 @@ import "@fontsource/libre-barcode-128-text";
 import "@fontsource-variable/lexend";
 import "@fontsource-variable/source-code-pro";
 
-const App = () => {
-  const defaultCogSpeed = 10;
-
+function App() {
   const [activePage, setActivePage] = useState(0);
-  const [cogSpeed, setCogSpeed] = useState(defaultCogSpeed);
+  const [isFast, setFast] = useState(false);
 
-  const decelerateCogs = () => {
-    setCogSpeed(defaultCogSpeed);
+  const handlePageChange = (page) => {
+    if (activePage !== page) {
+      setActivePage(page);
+      spin();
+    }
   };
 
-  const accelerateCogs = () => {
-    setTimeout(decelerateCogs, 1000);
-    setCogSpeed(5);
-  };
+  const decelerateCogs = () => setFast(false);
+  const accelerateCogs = () => setFast(true);
 
-  const handlePageOnChange = (page) => {
-    setActivePage(page);
+  const spin = () => {
     accelerateCogs();
+    const wow = setTimeout(decelerateCogs, 1000);
+    return () => clearTimeout(wow);
   };
-
-  console.log(`sendhelp ==> cogSpeed: ${cogSpeed}`);
 
   return (
     <RootContainer>
       <BackgroundContainer>
-        <CogsContainer>
-          <SettingsIcon
-            style={{ animation: `cog-spin infinite ${cogSpeed}s linear` }}
-          />
-          <SettingsOutlinedIcon
-            style={{
-              animation: `cog-spin-backwards infinite ${cogSpeed}s linear`,
-            }}
-          />
-          <SettingsIcon
-            style={{ animation: `cog-spin infinite ${cogSpeed}s linear` }}
-          />
-        </CogsContainer>
+        <Cogs isFast={isFast} />
       </BackgroundContainer>
       <AppContainer>
-        <NavBar handlePageChange={handlePageOnChange} />
-        <Body handlePageOnChange={handlePageOnChange} activePage={activePage} />
+        <NavBar handlePageChange={handlePageChange} />
+        <Body handlePageChange={handlePageChange} activePage={activePage} />
         <Footer />
       </AppContainer>
     </RootContainer>
   );
-};
+}
 
 export default React.memo(App);
 
@@ -84,36 +69,4 @@ const BackgroundContainer = styled("div")({
   position: "absolute",
   zIndex: 0,
   overflow: "hidden",
-});
-
-const CogsContainer = styled("div")({
-  position: "relative",
-  width: "100vw",
-  height: "100vh",
-
-  svg: {
-    position: "absolute",
-    color: BackgroundColors.Dark,
-    display: "inline-flex",
-
-    ":nth-of-type(1)": {
-      fontSize: "650px",
-      top: "-315px",
-      left: "-184px",
-      rotate: "90deg",
-    },
-
-    ":nth-of-type(2)": {
-      fontSize: "650px",
-      top: "135px",
-      left: "75px",
-    },
-
-    ":nth-of-type(3)": {
-      fontSize: "650px",
-      top: "590px",
-      left: "-177px",
-      rotate: "28deg",
-    },
-  },
 });

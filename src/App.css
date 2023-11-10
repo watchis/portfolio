@@ -2,17 +2,34 @@
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .cog {
     animation: cog-spin infinite 10s linear;
   }
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
+  .cog {
+    animation: cog-spin infinite linear;
+    animation-duration: 20s;
+    animation-composition: accumulate;
+    animation-fill-mode: forwards;
+  }
+
   .cog-backwards {
-    animation: cog-spin-backwards infinite 10s linear;
+    animation: cog-spin-backwards infinite linear;
+    animation-duration: 20s;
+    animation-composition: accumulate;
+    animation-fill-mode: forwards;
+  }
+
+  .fast {
+    animation-duration: 5s !important;
+    animation-composition: accumulate;
+    animation-fill-mode: forwards;
   }
 }
+
 
 @keyframes cog-spin {
   from {
@@ -31,3 +48,5 @@
     transform: rotate(0deg);
   }
 }
+
+
