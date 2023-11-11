@@ -1,19 +1,23 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Box } from "@mui/system";
-import { ThemeColors } from "../consts/colors";
 import { Button } from "@mui/base";
 
-const NavBar = ({ handlePageChange }) => {
-  const pages = ["Home", "Resume", "About"];
+import { ThemeColors } from "../consts/colors";
+import { PageTitles } from "../consts/page_titles";
 
+const NavBar = ({ handlePageChange, activePage }) => {
   return (
     <NavBarBox>
-      <NavTitle>Warren Atchison</NavTitle>
+      <NavTitle onClick={() => handlePageChange(0)}>Warren Atchison</NavTitle>
       <NavItemBox>
-        {pages.map((item, i) => (
-          <NavButton onClick={() => handlePageChange(i)} key={`nav-${item}`}>
-            {item}
+        {PageTitles.map((pageTitle, pageNumber) => (
+          <NavButton
+            className={activePage === pageNumber ? "active" : ""}
+            onClick={() => handlePageChange(pageNumber)}
+            key={`nav-${pageTitle}`}
+          >
+            {pageTitle}
           </NavButton>
         ))}
       </NavItemBox>
@@ -34,6 +38,7 @@ const NavBarBox = styled(Box)({
   minWidth: "fit-content",
 
   zIndex: 2,
+  flexWrap: "nowrap",
 });
 
 const NavTitle = styled("p")({
@@ -48,6 +53,7 @@ const NavTitle = styled("p")({
 
   fontSize: "64px",
   fontFamily: "'Libre Barcode 128 Text', sans-serif",
+  cursor: "pointer",
 });
 
 const NavItemBox = styled(Box)({
@@ -58,6 +64,11 @@ const NavItemBox = styled(Box)({
 
   margin: "24px",
   marginRight: "64px",
+
+  ".active": {
+    color: `${ThemeColors.OffWhite} !important`,
+    borderBottom: `2px solid ${ThemeColors.Orange}`,
+  },
 });
 
 const NavButton = styled(Button)({
@@ -78,5 +89,6 @@ const NavButton = styled(Button)({
 
   "&:hover": {
     color: `${ThemeColors.OffWhite}50`,
+    cursor: "pointer",
   },
 });

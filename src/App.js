@@ -40,7 +40,7 @@ function App() {
         <Cogs isFast={isFast} />
       </BackgroundContainer>
       <AppContainer>
-        <NavBar handlePageChange={handlePageChange} />
+        <NavBar handlePageChange={handlePageChange} activePage={activePage} />
         <Body handlePageChange={handlePageChange} activePage={activePage} />
         <Footer />
       </AppContainer>

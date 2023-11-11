@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Container, IconButton, styled } from "@mui/material";
-import { github, linkedIn, mailTo } from "../consts/footer_consts";
-import { BackgroundColors } from "../consts/colors";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import { ThemeColors } from "../consts/colors";
+
+import { BackgroundColors, ThemeColors } from "../consts/colors";
+import { github, linkedIn, mailTo } from "../consts/footer_links";
 
 const Footer = () => {
   const handleClick = (url) => {

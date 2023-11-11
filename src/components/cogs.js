@@ -1,19 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import SettingsIcon from "@mui/icons-material/Settings";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+
 import { BackgroundColors } from "../consts/colors";
 
 const Cogs = ({ isFast }) => {
-  console.log(`sendhelp ==> cogSpeed: ${isFast}`);
+  const timerIdRef = useRef(null);
+  const [rotate, setRotate] = useState(0);
+
+  const spin = (interval) => {
+    timerIdRef.current = setInterval(() => {
+      setRotate((rotate) => (rotate === 360 ? 0 : rotate + 1));
+    }, interval);
+  };
+
+  useEffect(() => {
+    clearInterval(timerIdRef.current);
+    spin(isFast ? 5 : 50);
+  }, [isFast]);
 
   return (
     <CogsContainer>
-      <SettingsIcon className={isFast ? "cog fast" : "cog"} />
-      <SettingsOutlinedIcon
-        className={isFast ? "cog-backwards fast" : "cog-backwards"}
+      <SettingsIcon
+        style={{ transform: `rotate(${rotate}deg)`, animation: "ease-out" }}
       />
-      <SettingsIcon className={isFast ? "cog fast" : "cog"} />
+      <SettingsOutlinedIcon
+        style={{
+          transform: `rotate(${360 - rotate}deg)`,
+          animation: "ease-out",
+        }}
+      />
+      <SettingsIcon
+        style={{ transform: `rotate(${rotate}deg)`, animation: "ease-out" }}
+      />
     </CogsContainer>
   );
 };
