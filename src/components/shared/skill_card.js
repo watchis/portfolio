@@ -44,7 +44,7 @@ const StyledCard = styled(Card)({
   transition: "0.15s",
 
   "&:hover": {
-    filter: `drop-shadow(0 0 0.75rem ${ThemeColors.Orange})`,
+    filter: `drop-shadow(0 0 0.50rem ${ThemeColors.Orange})`,
     cursor: "pointer",
   },
 });

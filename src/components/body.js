@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactPageScroller from "react-page-scroller";
 
 import About from "./body_pages/about";

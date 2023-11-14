@@ -9,4 +9,6 @@ export const ThemeColors = {
   PaleYellow: "#DBBD6C",
   Red: "#A73C1B",
   OffWhite: "#E4E6EB",
+  Gray: "#646566",
+  LightGray: "#BCBCBC",
 };
