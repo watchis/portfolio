@@ -50,6 +50,7 @@ const NavTitle = styled("p")({
 
   color: ThemeColors.Orange,
   userSelect: "none",
+  whiteSpace: "nowrap",
 
   fontSize: "64px",
   fontFamily: "'Libre Barcode 128 Text', sans-serif",

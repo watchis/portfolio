@@ -13,6 +13,7 @@ import img from "./assets/bg-grid.png";
 import "@fontsource/libre-barcode-128-text";
 import "@fontsource-variable/lexend";
 import "@fontsource-variable/source-code-pro";
+import "@fontsource-variable/maven-pro";
 
 function App() {
   const [activePage, setActivePage] = useState(0);
