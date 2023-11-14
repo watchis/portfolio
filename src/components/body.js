@@ -6,12 +6,17 @@ import Home from "./body_pages/home";
 import Resume from "./body_pages/resume";
 import Skills from "./body_pages/skills";
 
-const Body = ({ activePage, handlePageChange }) => {
+const Body = ({
+  activePage,
+  handleBeforePageChange,
+  handleScrollUnavailable,
+}) => {
   return (
     <ReactPageScroller
-      onBeforePageScroll={handlePageChange}
+      onBeforePageScroll={handleBeforePageChange}
       customPageNumber={activePage}
       renderAllPagesOnFirstRender={true}
+      handleScrollUnavailable={handleScrollUnavailable}
       zIndex={1}
     >
       <Home />

@@ -7,14 +7,22 @@ import { ThemeColors } from "../consts/colors";
 import { PageTitles } from "../consts/page_titles";
 
 const NavBar = ({ handlePageChange, activePage }) => {
+  const handleClick = (pageNumber) => handlePageChange(pageNumber);
+
   return (
     <NavBarBox>
       <NavTitle onClick={() => handlePageChange(0)}>Warren Atchison</NavTitle>
       <NavItemBox>
         {PageTitles.map((pageTitle, pageNumber) => (
           <NavButton
-            className={activePage === pageNumber ? "active" : ""}
-            onClick={() => handlePageChange(pageNumber)}
+            className={
+              activePage === pageNumber
+                ? "active"
+                : activePage > pageNumber
+                ? "hasBorder"
+                : ""
+            }
+            onClick={() => handleClick(pageNumber)}
             key={`nav-${pageTitle}`}
           >
             {pageTitle}
@@ -70,6 +78,10 @@ const NavItemBox = styled(Box)({
     color: `${ThemeColors.OffWhite} !important`,
     borderBottom: `2px solid ${ThemeColors.Orange}`,
   },
+
+  ".hasBorder": {
+    borderBottom: `2px solid ${ThemeColors.Orange}`,
+  },
 });
 
 const NavButton = styled(Button)({
@@ -82,11 +94,11 @@ const NavButton = styled(Button)({
   border: "transparent solid 1px",
   borderRadius: "0",
 
-  margin: "0 8px",
-  padding: "8px 16px",
+  margin: "0 -1px",
+  padding: "8px 24px",
 
   userSelect: "none",
-  transition: "0.1s",
+  transition: "0.3s ease",
 
   "&:hover": {
     color: `${ThemeColors.OffWhite}50`,
