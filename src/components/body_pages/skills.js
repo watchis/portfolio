@@ -37,7 +37,7 @@ const SkillsPage = styled(Box)({
   alignItems: "center",
   justifyContent: "center",
 
-  justifyContent: "center",
+  overflow: "hidden",
 });
 
 const SkillContainer = styled("div")({

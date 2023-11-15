@@ -13,6 +13,7 @@ const Resume = () => {
           display: "flex",
           height: "100%",
           width: "100%",
+          overflow: "hidden",
         }}
       >
         <Box
@@ -96,6 +97,8 @@ const DownloadButton = styled(Button)({
 
   border: "1px solid",
   borderColor: ThemeColors.Orange,
+
+  marginBottom: "4px",
 
   transition: "0.15s",
 

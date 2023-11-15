@@ -53,4 +53,6 @@ const HomeText = styled("p")({
   fontSize: "64px",
 
   margin: "0 64px 16px 0",
+
+  overflow: "hidden",
 });
