@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.639dc922.css",
+    "main.js": "/portfolio/static/js/main.fc051059.js",
+    "static/media/warren.jpg": "/portfolio/static/media/warren.8715e91d05aef50d65aa.jpg",
+    "static/media/Lexend-SemiBold.ttf": "/portfolio/static/media/Lexend-SemiBold.5ffdb1c15a3bcb447671.ttf",
+    "static/media/Lexend-Bold.ttf": "/portfolio/static/media/Lexend-Bold.db264efcc7fd48090485.ttf",
+    "static/media/Lexend-Regular.ttf": "/portfolio/static/media/Lexend-Regular.6da6431a76b62006dd10.ttf",
+    "static/media/MavenPro-SemiBold.ttf": "/portfolio/static/media/MavenPro-SemiBold.7ac3a1136832200b9737.ttf",
+    "static/media/MavenPro-Bold.ttf": "/portfolio/static/media/MavenPro-Bold.2dccb268664746472600.ttf",
+    "static/media/MavenPro-Regular.ttf": "/portfolio/static/media/MavenPro-Regular.8d1777f845b733518145.ttf",
+    "static/media/cog150.png": "/portfolio/static/media/cog150.8bbac1671ed521c94bbf.png",
+    "static/media/lexend-latin-wght-normal.woff2": "/portfolio/static/media/lexend-latin-wght-normal.f0861a122355d47a9b27.woff2",
+    "static/media/lexend-latin-ext-wght-normal.woff2": "/portfolio/static/media/lexend-latin-ext-wght-normal.94b395946a6799fff8c8.woff2",
+    "static/media/bg-grid.png": "/portfolio/static/media/bg-grid.8251ea29522c83dc2904.png",
+    "static/media/source-code-pro-latin-ext-wght-normal.woff2": "/portfolio/static/media/source-code-pro-latin-ext-wght-normal.926d47d8a23288f10476.woff2",
+    "static/media/source-code-pro-latin-wght-normal.woff2": "/portfolio/static/media/source-code-pro-latin-wght-normal.afba916b6a32bd1e0b27.woff2",
+    "static/media/maven-pro-latin-wght-normal.woff2": "/portfolio/static/media/maven-pro-latin-wght-normal.38e844d84acff5b916d6.woff2",
+    "static/media/maven-pro-latin-ext-wght-normal.woff2": "/portfolio/static/media/maven-pro-latin-ext-wght-normal.f6176eb8d4dd9dc3ad19.woff2",
+    "static/media/source-code-pro-cyrillic-wght-normal.woff2": "/portfolio/static/media/source-code-pro-cyrillic-wght-normal.73d813e592d8dc7d87bb.woff2",
+    "static/media/lexend-vietnamese-wght-normal.woff2": "/portfolio/static/media/lexend-vietnamese-wght-normal.ac5494e335c7c2cb000d.woff2",
+    "static/media/libre-barcode-128-text-latin-400-normal.woff2": "/portfolio/static/media/libre-barcode-128-text-latin-400-normal.22d06d763839194a0d61.woff2",
+    "static/media/libre-barcode-128-text-latin-400-normal.woff": "/portfolio/static/media/libre-barcode-128-text-latin-400-normal.3c98d23c3b5530bce9dc.woff",
+    "static/media/source-code-pro-greek-wght-normal.woff2": "/portfolio/static/media/source-code-pro-greek-wght-normal.ef09ead00f9ed966a9bd.woff2",
+    "static/media/source-code-pro-cyrillic-ext-wght-normal.woff2": "/portfolio/static/media/source-code-pro-cyrillic-ext-wght-normal.edf4156528290ce54409.woff2",
+    "static/media/source-code-pro-vietnamese-wght-normal.woff2": "/portfolio/static/media/source-code-pro-vietnamese-wght-normal.784b3d9a69f75d8b55b7.woff2",
+    "static/media/maven-pro-vietnamese-wght-normal.woff2": "/portfolio/static/media/maven-pro-vietnamese-wght-normal.05c8423dc1953d37fd36.woff2",
+    "static/media/source-code-pro-greek-ext-wght-normal.woff2": "/portfolio/static/media/source-code-pro-greek-ext-wght-normal.12f4f25e9c89ce51ed51.woff2",
+    "index.html": "/portfolio/index.html",
+    "main.639dc922.css.map": "/portfolio/static/css/main.639dc922.css.map",
+    "main.fc051059.js.map": "/portfolio/static/js/main.fc051059.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.639dc922.css",
+    "static/js/main.fc051059.js"
+  ]
+}
