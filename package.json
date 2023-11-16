@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://watchis.github.io/portfolio",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -13,6 +14,7 @@
     "@mui/material": "^5.14.17",
     "@react-pdf/renderer": "3.1.12",
     "animate.css": "^4.1.1",
+    "gh-pages": "^6.0.0",
     "lodash": "^4.17.21",
     "mui-image": "^1.0.7",
     "react": "^18.2.0",
