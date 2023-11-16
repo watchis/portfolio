@@ -44,7 +44,7 @@ function App() {
 
   const spin = () => {
     accelerateCogs();
-    const timeout = setTimeout(decelerateCogs, 850);
+    const timeout = setTimeout(decelerateCogs, 675);
     return () => clearTimeout(timeout);
   };
 

@@ -13,6 +13,7 @@ const Body = ({
 }) => {
   return (
     <ReactPageScroller
+      animationTimer={750}
       onBeforePageScroll={handleBeforePageChange}
       customPageNumber={activePage}
       renderAllPagesOnFirstRender={true}
