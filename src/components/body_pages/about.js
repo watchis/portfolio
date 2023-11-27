@@ -5,6 +5,7 @@ import { Image } from "mui-image";
 
 import { ThemeColors } from "../../consts/colors";
 import { PageTitle } from "../shared/page_title";
+import ProfilePic from "./../../assets/about/warren.jpg";
 
 const About = () => {
   const currentDate = new Date();
@@ -25,7 +26,7 @@ const About = () => {
           maxWidth: "425px",
         }}
       >
-        <ProfilePicture src="about/warren.jpg" />
+        <ProfilePicture src={ProfilePic} />
       </Box>
       <Box
         sx={{
