@@ -10,7 +10,14 @@ export const SkillCard = ({ skill }) => {
 
   return (
     <StyledCard variant="outlined" onClick={() => handleClick(skill.url)}>
-      <CardLogo image={skill.logo} title={skill.title} />
+      <CardLogo
+        image={skill.logo}
+        title={skill.title}
+        sx={{
+          width: { sm: "7vw", xs: "88px" },
+          height: { sm: "7vw", xs: "88px" },
+        }}
+      />
       <CardContent
         sx={{
           padding: 0,
@@ -30,13 +37,15 @@ const StyledCard = styled(Card)({
   justifyContent: "center",
   backgroundColor: ThemeColors.Default,
 
-  minHeight: "200px",
-  height: "200px",
+  // minHeight: "200px",
+  // height: "200px",
 
-  minWidth: "158px",
-  width: "158px",
+  // maxWidth: "158px",
+  // // width: "158px",
+  // width: "8.5vw",
+  // height: "8.5wh",
 
-  margin: "16px",
+  // margin: "16px",
 
   border: "1px solid",
   borderColor: ThemeColors.Orange,
@@ -50,10 +59,12 @@ const StyledCard = styled(Card)({
 });
 
 const CardLogo = styled(CardMedia)({
-  height: "138px",
-  width: "138px",
-
-  margin: "10px",
+  // height: "138px",
+  // width: "138px",
+  // height: "9vw",
+  // width: "9vw",
+  // margin: "10px",
+  margin: "4px",
 });
 
 const TitleText = styled("p")({

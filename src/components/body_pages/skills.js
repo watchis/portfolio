@@ -7,27 +7,22 @@ import { ThemeColors } from "../../consts/colors";
 import { SkillCard } from "../shared/skill_card";
 import { LanguageSkills, ToolSkills } from "../../consts/skills_data";
 
-const Skills = () => {
+const Skills = (_, ref) => {
   return (
-    <SkillsPage>
+    <SkillsPage ref={ref} sx={{ padding: { sm: "0 180px", xs: "8px" } }}>
       <PageTitle style={{ marginTop: "0px", marginBottom: "50px" }}>
         My <span style={{ color: ThemeColors.Orange }}>Skills</span>
       </PageTitle>
-      <SkillContainer>
-        {LanguageSkills.map((skill) => (
+      <SkillContainer sx={{ gap: { sm: "40px", xs: "24px" } }}>
+        {[...LanguageSkills, ...ToolSkills].map((skill) => (
           <SkillCard key={`languageSkillCard-${skill.title}`} skill={skill} />
-        ))}
-      </SkillContainer>
-      <SkillContainer>
-        {ToolSkills.map((skill) => (
-          <SkillCard key={`toolSkillCard-${skill.title}`} skill={skill} />
         ))}
       </SkillContainer>
     </SkillsPage>
   );
 };
 
-export default Skills;
+export default React.forwardRef(Skills);
 
 const SkillsPage = styled(Box)({
   display: "flex",
@@ -40,10 +35,9 @@ const SkillsPage = styled(Box)({
   overflow: "hidden",
 });
 
-const SkillContainer = styled("div")({
+const SkillContainer = styled(Box)({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-
-  marginTop: "16px",
+  flexWrap: "wrap",
 });

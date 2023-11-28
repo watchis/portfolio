@@ -1,68 +1,107 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Box } from "@mui/system";
 import { Button } from "@mui/base";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Typography, AppBar, IconButton, Toolbar } from "@mui/material";
 
 import { ThemeColors } from "../consts/colors";
 import { PageTitles } from "../consts/page_titles";
+import DrawerNav from "./drawer";
 
-const NavBar = ({ handlePageChange, activePage }) => {
+const NavBar = (props) => {
+  const { handlePageChange, activePage, drawerItems } = props;
+  const [mobileOpen, setMobileOpen] = useState(false);
   const handleClick = (pageNumber) => handlePageChange(pageNumber);
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
 
   return (
-    <NavBarBox>
-      <NavTitle onClick={() => handlePageChange(0)}>Warren Atchison</NavTitle>
-      <NavItemBox>
-        {PageTitles.map((pageTitle, pageNumber) => (
-          <NavButton
-            className={
-              activePage === pageNumber
-                ? "active"
-                : activePage > pageNumber
-                ? "hasBorder"
-                : ""
-            }
-            onClick={() => handleClick(pageNumber)}
-            key={`nav-${pageTitle}`}
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar
+        position="static"
+        style={{ background: "transparent", boxShadow: "none" }}
+      >
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
-            {pageTitle}
-          </NavButton>
-        ))}
-      </NavItemBox>
-    </NavBarBox>
+            <MenuIcon />
+          </IconButton>
+          <NavTitle
+            variant="h6"
+            component="div"
+            onClick={() => handlePageChange(0)}
+            sx={{
+              flexGrow: 1,
+              display: { sm: "block", xs: "none" },
+            }}
+          >
+            Warren Atchison
+          </NavTitle>
+          <NavItemBox sx={{ display: { xs: "none", sm: "block" } }}>
+            {PageTitles.map((pageTitle, pageNumber) => (
+              <NavButton
+                className={
+                  activePage === pageNumber
+                    ? "active"
+                    : activePage > pageNumber
+                    ? "hasBorder"
+                    : ""
+                }
+                onClick={() => handleClick(pageNumber)}
+                key={`nav-${pageTitle}`}
+              >
+                {pageTitle}
+              </NavButton>
+            ))}
+          </NavItemBox>
+        </Toolbar>
+      </AppBar>
+      <DrawerNav
+        handleDrawerToggle={handleDrawerToggle}
+        mobileOpen={mobileOpen}
+        drawerItems={drawerItems}
+      />
+    </Box>
   );
 };
 
 export default NavBar;
 
-const NavBarBox = styled(Box)({
+const NavBarBox = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
-  marginBottom: "auto",
-
-  minHeight: "fit-content",
-
   width: "100%",
-  minWidth: "fit-content",
-
   zIndex: 2,
   flexWrap: "nowrap",
 });
 
-const NavTitle = styled("p")({
+const NavBox = styled(Box)({
+  ".isActive > button": {
+    borderColor: ThemeColors.Orange,
+    color: ThemeColors.Orange,
+  },
+});
+
+const NavTitle = styled(Typography)({
+  display: { sm: "none" },
   display: "flex",
   justifyContent: "left",
 
-  margin: "24px",
-  marginLeft: "64px",
-
   color: ThemeColors.Orange,
   userSelect: "none",
-  whiteSpace: "nowrap",
-
   fontSize: "64px",
   fontFamily: "'Libre Barcode 128 Text', sans-serif",
   cursor: "pointer",
+  wordSpacing: "-12px",
+  paddingLeft: "64px",
 });
 
 const NavItemBox = styled(Box)({
@@ -70,6 +109,8 @@ const NavItemBox = styled(Box)({
   minWidth: "fit-content",
   alignItems: "center",
   justifyItems: "right",
+
+  display: { sm: "none" },
 
   margin: "24px",
   marginRight: "64px",
@@ -105,3 +146,12 @@ const NavButton = styled(Button)({
     cursor: "pointer",
   },
 });
+
+const scrolledStyle = {
+  color: "white",
+  boxShadow: "none",
+};
+
+const topStyle = {
+  background: "transparent",
+};

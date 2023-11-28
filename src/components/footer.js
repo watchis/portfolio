@@ -52,7 +52,6 @@ const FooterBox = styled(Box)({
 
   background: BackgroundColors.Dark,
   zIndex: 1,
-  marginTop: "10px",
 });
 
 const SocialsContainer = styled(Container)({

@@ -1,46 +1,89 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import { BackgroundColors, ThemeColors } from "../../consts/colors";
 
-const Home = () => {
+const Home = (_, ref) => {
   return (
-    <HomeContainer>
-      <HomeText>
-        Hello, <span style={{ color: ThemeColors.Orange }}>Warren</span> here!
-      </HomeText>
-      <HomeText>
-        and I'm a{" "}
-        <span
-          style={{
-            fontFamily: "Source Code Pro Variable",
-            color: ThemeColors.Red,
+    <>
+      <HomeContainer
+        sx={{
+          display: { xs: "none", sm: "flex" },
+          paddingRight: "64px",
+          height: "inherit",
+          alignItems: "flex-end",
+          marginTop: "-64px",
+        }}
+      >
+        <HomeText>
+          Hello, <span style={{ color: ThemeColors.Orange }}>Warren</span> here!
+        </HomeText>
+        <HomeText
+          sx={{
+            fontSize: { xs: "36px", sm: "64px" },
           }}
         >
-          {"<"}
-          <span style={{ color: ThemeColors.PaleYellow }}>
-            Software Engineer
+          and I'm a{" "}
+          <span
+            style={{
+              fontFamily: "Source Code Pro Variable",
+              color: ThemeColors.Red,
+            }}
+          >
+            {"<"}
+            <span style={{ color: ThemeColors.PaleYellow }}>
+              Software Engineer
+            </span>
+            {"/>"}
           </span>
-          {"/>"}
-        </span>
-      </HomeText>
-    </HomeContainer>
+        </HomeText>
+      </HomeContainer>
+      <HomeContainer
+        ref={ref}
+        sx={{
+          display: { xs: "flex", sm: "none" },
+          height: "100vh",
+          alignItems: "center",
+          marginTop: "-80px",
+        }}
+      >
+        <HomeText style={{ fontSize: "40px" }}>Hello,</HomeText>
+        <HomeText>
+          <span style={{ color: ThemeColors.Orange }}>Warren</span>
+        </HomeText>
+        <HomeText style={{ fontSize: "40px" }}>here!</HomeText>
+        <HomeText style={{ fontSize: "40px" }}>and I'm a</HomeText>
+        <HomeText>
+          <span
+            style={{
+              fontFamily: "Source Code Pro Variable",
+              color: ThemeColors.Red,
+              fontSize: "32px",
+            }}
+          >
+            {"<"}
+            <span style={{ color: ThemeColors.PaleYellow }}>
+              Software Engineer
+            </span>
+            {"/>"}
+          </span>
+        </HomeText>
+      </HomeContainer>
+    </>
   );
 };
 
-export default Home;
+export default React.forwardRef(Home);
 
 const HomeContainer = styled(Box)({
   display: "flex",
   flexDirection: "column",
-  alignItems: "flex-end",
-  justifyContent: "center",
 
-  height: "inherit",
+  justifyContent: "center",
 });
 
-const HomeText = styled("p")({
+const HomeText = styled(Typography)({
   display: "block",
   position: "relative",
   zIndex: 1,
@@ -51,8 +94,6 @@ const HomeText = styled("p")({
   userSelect: "none",
   fontFamily: "'Lexend Variable', sans-serif",
   fontSize: "64px",
-
-  margin: "0 64px 16px 0",
 
   overflow: "hidden",
 });

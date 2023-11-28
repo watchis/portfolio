@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { Box } from "@mui/system";
 import styled from "@emotion/styled";
 import _ from "lodash";
@@ -19,6 +19,17 @@ import "@fontsource-variable/maven-pro";
 function App() {
   const [activePage, setActivePage] = useState(0);
   const [isFast, setFast] = useState(false);
+  const homeRef = useRef(null);
+  const resumeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+
+  const drawerItems = {
+    Home: () => homeRef.current?.scrollIntoView({ behavior: "smooth" }),
+    Skills: () => skillsRef.current?.scrollIntoView({ behavior: "smooth" }),
+    Resume: () => resumeRef.current?.scrollIntoView({ behavior: "smooth" }),
+    About: () => aboutRef.current?.scrollIntoView({ behavior: "smooth" }),
+  };
 
   const handleBeforePageChange = (page) => {
     if (activePage !== page) {
@@ -59,11 +70,16 @@ function App() {
         <NavBar
           handlePageChange={handlePageChangeNav}
           activePage={activePage}
+          drawerItems={drawerItems}
         />
         <Body
           handleBeforePageChange={handleBeforePageChange}
           activePage={activePage}
           handleScrollUnavailable={handleScrollUnavailable}
+          homeRef={homeRef}
+          aboutRef={aboutRef}
+          skillsRef={skillsRef}
+          resumeRef={resumeRef}
         />
         <Footer />
       </AppContainer>
