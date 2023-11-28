@@ -59,7 +59,7 @@ const Home = (_, ref) => {
             style={{
               fontFamily: "Source Code Pro Variable",
               color: ThemeColors.Red,
-              fontSize: "32px",
+              fontSize: "7vw",
             }}
           >
             {"<"}

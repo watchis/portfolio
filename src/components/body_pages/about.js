@@ -16,7 +16,10 @@ const About = (_, ref) => {
   return (
     <AboutPage
       ref={ref}
-      sx={{ flexDirection: { sm: "row", xs: "column-reverse" } }}
+      sx={{
+        flexDirection: { sm: "row", xs: "column-reverse" },
+        height: { sm: "100vh", xs: "initial" },
+      }}
     >
       <Box
         sx={{
@@ -96,7 +99,6 @@ export default React.forwardRef(About);
 const AboutPage = styled(Box)({
   display: "flex",
   alignItems: "center",
-  height: "100%",
   width: "100%",
 });
 

@@ -9,7 +9,7 @@ import { LanguageSkills, ToolSkills } from "../../consts/skills_data";
 
 const Skills = (_, ref) => {
   return (
-    <SkillsPage ref={ref} sx={{ padding: { sm: "0 180px", xs: "8px" } }}>
+    <SkillsPage ref={ref} sx={{ padding: { sm: "0 10vw", xs: "8px" } }}>
       <PageTitle style={{ marginTop: "0px", marginBottom: "50px" }}>
         My <span style={{ color: ThemeColors.Orange }}>Skills</span>
       </PageTitle>

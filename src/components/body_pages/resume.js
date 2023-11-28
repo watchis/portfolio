@@ -1,18 +1,19 @@
+import React from "react";
 import { Box } from "@mui/system";
 import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 import DocumentResume from "./resume/documentResume";
 import { Container, styled, Button } from "@mui/material";
 import { BackgroundColors, ThemeColors } from "./../../consts/colors";
 import { PageTitle } from "../shared/page_title";
-import React from "react";
 
 const Resume = (_, ref) => {
+  const getHeight = window.screen.height / 1.5;
   return (
     <Container
       ref={ref}
       sx={{
         display: "flex",
-        height: { sm: "100%", xs: "100vh" },
+        height: "100vh",
         width: "100%",
         overflow: "hidden",
       }}
@@ -20,37 +21,48 @@ const Resume = (_, ref) => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           width: "100%",
         }}
-        gap="24px"
+        gap="40px"
       >
-        <PageTitle>
-          My <span style={{ color: ThemeColors.Orange }}>Resume</span>
-        </PageTitle>
+        <Box
+          sx={{
+            display: "flex",
+            padding: "0 24px",
+            flexDirection: "column",
+            alignItems: "center",
+            width: { sm: "20vw", xs: "100vw" },
+            gap: "24px",
+            marginTop: { xs: "-120px" },
+          }}
+        >
+          <PageTitle>
+            My <span style={{ color: ThemeColors.Orange }}>Resume</span>
+          </PageTitle>
+          <DownloadLink
+            document={<DocumentResume />}
+            fileName="Software Engineer - Warren Atchison.pdf"
+            className="nameContainer"
+            style={{ textDecoration: "none" }}
+          >
+            {({ loading }) =>
+              loading ? (
+                <DownloadButton disabled className="buttonDL disabled">
+                  Loading ...
+                </DownloadButton>
+              ) : (
+                <DownloadButton className="">Download Resume</DownloadButton>
+              )
+            }
+          </DownloadLink>
+        </Box>
         <Box sx={{ display: { sm: "contents", xs: "none" } }}>
-          <PDFViewer width="100%" height={550} style={pdfStyle}>
+          <PDFViewer width="100%" height={getHeight} style={pdfStyle}>
             <DocumentResume />
           </PDFViewer>
         </Box>
-        <DownloadLink
-          document={<DocumentResume />}
-          fileName="Software Engineer - Warren Atchison.pdf"
-          className="nameContainer"
-          style={{ textDecoration: "none" }}
-        >
-          {({ loading }) =>
-            loading ? (
-              <DownloadButton disabled className="buttonDL disabled">
-                Loading ...
-              </DownloadButton>
-            ) : (
-              <DownloadButton className="">Download Resume</DownloadButton>
-            )
-          }
-        </DownloadLink>
       </Box>
     </Container>
   );
