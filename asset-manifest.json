@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.639dc922.css",
-    "main.js": "/portfolio/static/js/main.30d08815.js",
+    "main.css": "/portfolio/static/css/main.a8841da6.css",
+    "main.js": "/portfolio/static/js/main.979c7069.js",
     "static/media/warren.jpg": "/portfolio/static/media/warren.8715e91d05aef50d65aa.jpg",
     "static/media/Lexend-SemiBold.ttf": "/portfolio/static/media/Lexend-SemiBold.5ffdb1c15a3bcb447671.ttf",
     "static/media/Lexend-Bold.ttf": "/portfolio/static/media/Lexend-Bold.db264efcc7fd48090485.ttf",
@@ -20,18 +20,31 @@
     "static/media/source-code-pro-cyrillic-wght-normal.woff2": "/portfolio/static/media/source-code-pro-cyrillic-wght-normal.73d813e592d8dc7d87bb.woff2",
     "static/media/lexend-vietnamese-wght-normal.woff2": "/portfolio/static/media/lexend-vietnamese-wght-normal.ac5494e335c7c2cb000d.woff2",
     "static/media/libre-barcode-128-text-latin-400-normal.woff2": "/portfolio/static/media/libre-barcode-128-text-latin-400-normal.22d06d763839194a0d61.woff2",
+    "static/media/cassandra.svg": "/portfolio/static/media/cassandra.72f8e1643a194001ca3e99ee6190dc2c.svg",
     "static/media/libre-barcode-128-text-latin-400-normal.woff": "/portfolio/static/media/libre-barcode-128-text-latin-400-normal.3c98d23c3b5530bce9dc.woff",
     "static/media/source-code-pro-greek-wght-normal.woff2": "/portfolio/static/media/source-code-pro-greek-wght-normal.ef09ead00f9ed966a9bd.woff2",
     "static/media/source-code-pro-cyrillic-ext-wght-normal.woff2": "/portfolio/static/media/source-code-pro-cyrillic-ext-wght-normal.edf4156528290ce54409.woff2",
     "static/media/source-code-pro-vietnamese-wght-normal.woff2": "/portfolio/static/media/source-code-pro-vietnamese-wght-normal.784b3d9a69f75d8b55b7.woff2",
     "static/media/maven-pro-vietnamese-wght-normal.woff2": "/portfolio/static/media/maven-pro-vietnamese-wght-normal.05c8423dc1953d37fd36.woff2",
+    "static/media/java.svg": "/portfolio/static/media/java.68585ce8dadbd8ecebdc99a764c5c1cf.svg",
+    "static/media/postgresql.svg": "/portfolio/static/media/postgresql.29aef66790dafa021ec4c36bbd59e370.svg",
     "static/media/source-code-pro-greek-ext-wght-normal.woff2": "/portfolio/static/media/source-code-pro-greek-ext-wght-normal.12f4f25e9c89ce51ed51.woff2",
+    "static/media/react.svg": "/portfolio/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/go.svg": "/portfolio/static/media/go.83e241b0562e629eaec59993e2b230e0.svg",
+    "static/media/python.svg": "/portfolio/static/media/python.7658fc5b493f0fa4979b28893c05b15b.svg",
+    "static/media/kafka.svg": "/portfolio/static/media/kafka.d259f9258d066a6f169cf8e43b628e4e.svg",
+    "static/media/dart.svg": "/portfolio/static/media/dart.e2a4806494a6f9f16967412d9bb79fce.svg",
+    "static/media/javascript.svg": "/portfolio/static/media/javascript.00f3e5cf8bcf4ae623b3835ca5791b15.svg",
+    "static/media/git.svg": "/portfolio/static/media/git.98b115687dfc759d25ae8a1d8f7d7d32.svg",
+    "static/media/css3.svg": "/portfolio/static/media/css3.541200b174db976480edcedb73d25268.svg",
     "index.html": "/portfolio/index.html",
-    "main.639dc922.css.map": "/portfolio/static/css/main.639dc922.css.map",
-    "main.30d08815.js.map": "/portfolio/static/js/main.30d08815.js.map"
+    "static/media/html5.svg": "/portfolio/static/media/html5.5804150e47fbeb132a5d2688f08ce4c8.svg",
+    "static/media/docker.svg": "/portfolio/static/media/docker.0d539ed6d8b9c2b324dffd830bd1b603.svg",
+    "main.a8841da6.css.map": "/portfolio/static/css/main.a8841da6.css.map",
+    "main.979c7069.js.map": "/portfolio/static/js/main.979c7069.js.map"
   },
   "entrypoints": [
-    "static/css/main.639dc922.css",
-    "static/js/main.30d08815.js"
+    "static/css/main.a8841da6.css",
+    "static/js/main.979c7069.js"
   ]
 }
