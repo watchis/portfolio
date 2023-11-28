@@ -5,11 +5,11 @@ const Details = () => {
     <View style={styles.view}>
       <Text style={styles.header}>Details</Text>
       <View>
-        <Text style={styles.detail}>31518 Bearded Oak Dr.</Text>
-        <Text style={styles.detail}>Tampa, 33543</Text>
+        <Text style={styles.detail}>48 Knotting Hill Dr.</Text>
+        <Text style={styles.detail}>Fayetteville, TN, 37334</Text>
         <Text style={styles.detail}>United States</Text>
       </View>
-      <Text style={styles.number}>(318) 525 - 4548</Text>
+      <Text style={styles.number}>(318) 525-4548</Text>
       <Text style={styles.email}>warren.atchison98@gmail.com</Text>
     </View>
   );
