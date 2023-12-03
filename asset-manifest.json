@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.a8841da6.css",
-    "main.js": "/portfolio/static/js/main.ba0e9825.js",
+    "main.js": "/portfolio/static/js/main.5e29d001.js",
     "static/media/warren.jpg": "/portfolio/static/media/warren.8715e91d05aef50d65aa.jpg",
-    "static/media/Lexend-SemiBold.ttf": "/portfolio/static/media/Lexend-SemiBold.5ffdb1c15a3bcb447671.ttf",
-    "static/media/Lexend-Bold.ttf": "/portfolio/static/media/Lexend-Bold.db264efcc7fd48090485.ttf",
-    "static/media/Lexend-Regular.ttf": "/portfolio/static/media/Lexend-Regular.6da6431a76b62006dd10.ttf",
-    "static/media/MavenPro-SemiBold.ttf": "/portfolio/static/media/MavenPro-SemiBold.7ac3a1136832200b9737.ttf",
-    "static/media/MavenPro-Bold.ttf": "/portfolio/static/media/MavenPro-Bold.2dccb268664746472600.ttf",
-    "static/media/MavenPro-Regular.ttf": "/portfolio/static/media/MavenPro-Regular.8d1777f845b733518145.ttf",
+    "static/media/Lexend-SemiBold.ttf": "/portfolio/static/media/Lexend-SemiBold.1ec56cc93dcc2d79f719.ttf",
+    "static/media/Lexend-Bold.ttf": "/portfolio/static/media/Lexend-Bold.7de9a4bb873283c04656.ttf",
+    "static/media/Lexend-Regular.ttf": "/portfolio/static/media/Lexend-Regular.61792806474664c79f57.ttf",
+    "static/media/MavenPro-SemiBold.ttf": "/portfolio/static/media/MavenPro-SemiBold.df28e7ecda438955e459.ttf",
+    "static/media/MavenPro-Bold.ttf": "/portfolio/static/media/MavenPro-Bold.3ef15dc5e4c06499c146.ttf",
+    "static/media/MavenPro-Regular.ttf": "/portfolio/static/media/MavenPro-Regular.7eedba493519705f406b.ttf",
     "static/media/cog150.png": "/portfolio/static/media/cog150.8bbac1671ed521c94bbf.png",
     "static/media/lexend-latin-wght-normal.woff2": "/portfolio/static/media/lexend-latin-wght-normal.f0861a122355d47a9b27.woff2",
     "static/media/lexend-latin-ext-wght-normal.woff2": "/portfolio/static/media/lexend-latin-ext-wght-normal.94b395946a6799fff8c8.woff2",
@@ -41,10 +41,10 @@
     "static/media/html5.svg": "/portfolio/static/media/html5.5804150e47fbeb132a5d2688f08ce4c8.svg",
     "static/media/docker.svg": "/portfolio/static/media/docker.0d539ed6d8b9c2b324dffd830bd1b603.svg",
     "main.a8841da6.css.map": "/portfolio/static/css/main.a8841da6.css.map",
-    "main.ba0e9825.js.map": "/portfolio/static/js/main.ba0e9825.js.map"
+    "main.5e29d001.js.map": "/portfolio/static/js/main.5e29d001.js.map"
   },
   "entrypoints": [
     "static/css/main.a8841da6.css",
-    "static/js/main.ba0e9825.js"
+    "static/js/main.5e29d001.js"
   ]
 }
