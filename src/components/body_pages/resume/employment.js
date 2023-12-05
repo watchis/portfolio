@@ -7,11 +7,11 @@ const data = [
     date: "Remote (June 2021 - Present)",
     list: [
       "Contributed to the development of extensible, maintainable client and server code using Dart and Golang within an Agile environment.",
-      "Engineered high-quality, accessible UI components in Dart, leveraging a wrapper for the Material-UI (MUI) component library.",
+      "Engineered high-quality, accessible UI components in Dart, leveraging wrappers for React and the Material UI (MUI) component library.",
       "Led and executed projects to enhance capabilities in Designed Reporting, ensuring seamless integration with the existing ecosystem.",
-      "Designed and implemented responsive Frugal and Rest APIs, employed across multiple Workiva repositories for internal use.",
+      "Designed and implemented responsive Rest APIs using Apache Thrift, employed across multiple Workiva repositories for internal use.",
       "Collaborated with customers, UX, and Product teams to gather requirements and translate them into comprehensive customer-facing features.",
-      "Developed innovative features and solutions for Workiva's platform, focusing on areas such as Designed Reporting, ESG-related solutions, and more!",
+      "Developed end-to-end features and solutions for Workiva's platform, focusing on areas such as Designed Reporting, ESG-related solutions, and more!",
     ],
   },
   {
