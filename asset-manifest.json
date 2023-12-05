@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.a8841da6.css",
-    "main.js": "/portfolio/static/js/main.5e29d001.js",
+    "main.js": "/portfolio/static/js/main.776b88b4.js",
     "static/media/warren.jpg": "/portfolio/static/media/warren.8715e91d05aef50d65aa.jpg",
     "static/media/Lexend-SemiBold.ttf": "/portfolio/static/media/Lexend-SemiBold.1ec56cc93dcc2d79f719.ttf",
     "static/media/Lexend-Bold.ttf": "/portfolio/static/media/Lexend-Bold.7de9a4bb873283c04656.ttf",
@@ -41,10 +41,10 @@
     "static/media/html5.svg": "/portfolio/static/media/html5.5804150e47fbeb132a5d2688f08ce4c8.svg",
     "static/media/docker.svg": "/portfolio/static/media/docker.0d539ed6d8b9c2b324dffd830bd1b603.svg",
     "main.a8841da6.css.map": "/portfolio/static/css/main.a8841da6.css.map",
-    "main.5e29d001.js.map": "/portfolio/static/js/main.5e29d001.js.map"
+    "main.776b88b4.js.map": "/portfolio/static/js/main.776b88b4.js.map"
   },
   "entrypoints": [
     "static/css/main.a8841da6.css",
-    "static/js/main.5e29d001.js"
+    "static/js/main.776b88b4.js"
   ]
 }
